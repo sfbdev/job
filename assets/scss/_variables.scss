@@ -1,0 +1,23 @@
+:root {
+  --primary: #3f72af;
+  --secondary: #453faf;
+  --light: #f9f7f7;
+  --dark: #111d4e;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+$theme-colors: (
+  "primary": var(--primary),
+  "secondary": var(--secondary),
+  "light": var(--light),
+  "dark": var(--dark),
+  "white": var(--white),
+  "black": var(--black)
+) !default; // Custom variable
+
+@each $color, $value in $theme-colors {
+  .#{$color}-btn {
+    background-color: $value;
+  }
+}
